@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<title>Online Examination Website</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{  
+
+background-image:url(blue.jpeg);
+
+background-size:cover;
+
+background-repeat: no-repeat;
+
+backdrop-filter:blur( 5px );
+
+-webkit-backdrop-filter:blur( 5px );
+
+font-family:Helvetica ;
+
+align-items: center;
+
+color: white;
+
+}
+
+h1{
+
+text-align: center;
+
+color:white;
+
+font-size: 70px;
+
+font-family:Helvetica ;
+
+}    
+
+ .box{
+
+     width: 900px;
+
+    align-items: center;
+
+    text-align: justify;
+
+    padding: 30px 30px 30px 30px ;
+
+    margin: 1% auto 0;
+
+    border:3px lightgreen solid;
+
+    border-radius: 30px;
+
+    float:center;
+
+    background:rgba(235, 235, 232, 0.2);
+
+	box-shadow: 0 8px 32 0px  rgba(31, 38, 135, 0.37);	-webkit-backdrop-filter: blur(18px);
+
+    backdrop-filter: blur(18px);
+
+    font-family:Helvetica ;
+
+}
+
+  /* pagination position styling */ 
+
+          
+
+  .pagination_section { 
+
+float:center;
+
+align-items: center;
+
+font-size: 20px;
+
+} 
+
+/* pagination styling */ 
+
+.pagination_section a { 
+
+color: white; 
+
+padding: 10px 18px; 
+
+text-decoration: none; 
+
+} 
+
+ /* pagination hover effect on active*/ 
+
+          
+
+ a:nth-child(3) { 
+
+background-color:rgba(248, 27, 211, 0.897); 
+
+color: white; 
+
+} 
+
+.box  .btn input{
+
+    background: rgba(238, 18, 164);
+
+    color: white;
+
+    width: 250px;
+
+    height: 40px;
+
+    font-size: 25px;
+
+    border: rgba(238, 18, 164);
+
+    font-family:Helvetica ;
+
+}
+
+</style>  
+
+ 
+
+<body>
+
+    <div class = "first">
+
+        <h1>ONLINE EXAMINATION</h1>
+
+        <div class="box">
+
+            <center> <h3 style="font-size:40px ; color:black;">LEVEL 2</h3></center>
+
+            <div><span id="time" style="float: right; font-size: 40px;"> Your time ends in 01:00</span></div><br><br><br>
+
+            <p>MULTIPLE CHOICE. Read each item carefully. Choose the best answer on the choices.</p>
+
+            <form name="exam" id="exam">
+
+            <div>
+
+           
+
+<p>6. A style sheet language used for describing the presentation of a document written in a markup language such as HTML.</p>
+
+<p><input type="radio" name="question6" value="CSS">A. CSS</p>
+
+<p><input type="radio" name="question6" value="Java">B. Java</p>
+
+<p><input type="radio" name="question6" value="php">C. php</p>
+
+<p><input type="radio" name="question6" value="JavaScript">D­. JavaScript</p>
+
+</div>
+
+<div>
+
+<p>7. Work involved in developing a website for the internet or intranet.</p>
+
+<p><input type="radio" name="question7" value="Applications Engineer">A. Applications Engineer</p>
+
+<p><input type="radio" name="question7" value="Software Architect">B. Software Architect</p>
+
+<p><input type="radio" name="question7" value="Web Development">C. Web Development</p>
+
+<p><input type="radio" name="question7" value="Software Developer">D. Software Developer </p>
+
+</div>
+
+<div>
+
+<p>8. Closing tags are identified by the ____ that precedes the tag name.</p>
+
+<p><input type="radio" name="question8" value="Ampersand">A.­ Ampersand</p>
+
+<p><input type="radio" name="question8" value="Question mark">B. Question mark</p>
+
+<p><input type="radio" name="question8" value="Exclamation point">C. Exclamation point</p>
+
+<p><input type="radio" name="question8" value="Slash">D. Slash</p>
+
+</div>
+
+<div>
+
+<p>9. A host that provides storage space for saving and retrieving files is called a ____.</p>
+
+<p><input type="radio" name="question9" value="File server">A. File server</p>
+
+<p><input type="radio" name="question9" value="Print server">B. Print server</p>
+
+<p><input type="radio" name="question9" value="Client-server­">C. Client-server</p>
+
+<p><input type="radio" name="question9" value="Server">D. Server</p>
+
+</div>
+
+<div>
+
+<p>10. ____ JavaScript is also called server-side JavaScript.</p>
+
+<p><input type="radio" name="question10" value="Native">A. Native</p>
+
+<p><input type="radio" name="question10" value="LiveWire">B. LiveWire</p>
+
+<p><input type="radio" name="question10" value="Navigator">C.­ Navigator</p>
+
+<p><input type="radio" name="question10" value="Microsoft">D.­ Microsoft</p>
+
+</div>
+
+<div class="btn">
+
+    <center> <input type="button" name="" value="View Score" id="button" onclick="secondcheck()"></center> </div>
+
+      </form>
+
+      <script src="script.js"></script>
+
+  <br> <br> <br>
+
+  <center><div class="score" id="score" style="font-size: 20px;"></div></center><br><br><br>
+
+    <div class="pagination_section"> 
+
+        <center><a href="first.html"><< Previous</a> 
+
+        <a href="first.html"class="active">1</a> 
+
+        <a href="sec.html">2</a> 
+
+        <a href="third.html" >3</a>  
+
+        <a href="third.html">Next >></a> </center>
+
+    </div> 
+
+        </div>
+
+       
+
+</div>
+
+</body>
+
+<script>
+
+    function startTimer(duration, display) {
+
+        
+
+            var timer = duration, minutes, seconds;
+
+        
+
+            setInterval(function () {
+
+        
+
+                minutes = parseInt(timer / 60, 10);
+
+        
+
+                seconds = parseInt(timer % 60, 10);
+
+        
+
+        
+
+        
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+
+        
+
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        
+
+        
+
+        
+
+                display.textContent = minutes + ":" + seconds;
+
+        
+
+        
+
+        
+
+                if (--timer < 0) {
+
+        
+
+                    timer = duration;
+
+        
+
+                }
+
+        
+
+            }, 1000);
+
+        
+
+        }
+
+        
+
+        
+
+        
+
+        window.onload = function () {
+
+        
+
+            var Minutes = 60 * 1,
+
+        
+
+                display = document.querySelector('#time');
+
+    
+
+            startTimer(Minutes, display);
+
+        
+
+        };
+
+        </script>
+
+</html>
