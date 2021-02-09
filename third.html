@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<title>Online Examination Website</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{  
+
+background-image:url(blue.jpeg);
+
+background-size:cover;
+
+background-repeat: no-repeat;
+
+backdrop-filter:blur( 5px );
+
+-webkit-backdrop-filter:blur( 5px );
+
+font-family:Helvetica ;
+
+align-items: center;
+
+color: white;
+
+}
+
+h1{
+
+text-align: center;
+
+color:white;
+
+font-size: 70px;
+
+font-family:Helvetica ;
+
+}    
+
+ .box{
+
+     width: 900px;
+
+    align-items: center;
+
+    text-align: justify;
+
+    padding: 30px 30px 30px 30px ;
+
+    margin: 1% auto 0;
+
+    border:3px lightgreen solid;
+
+    border-radius: 30px;
+
+    float:center;
+
+    background:rgba(235, 235, 232, 0.2);
+
+	box-shadow: 0 8px 32 0px  rgba(31, 38, 135, 0.37);	-webkit-backdrop-filter: blur(18px);
+
+    backdrop-filter: blur(18px);
+
+    font-family:Helvetica ;
+
+}
+
+  /* pagination position styling */ 
+
+          
+
+  .pagination_section { 
+
+float:center;
+
+align-items: center;
+
+font-size: 20px;
+
+} 
+
+/* pagination styling */ 
+
+.pagination_section a { 
+
+color: white; 
+
+padding: 10px 18px; 
+
+text-decoration: none; 
+
+} 
+
+ /* pagination hover effect on active*/ 
+
+          
+
+ a:nth-child(4) { 
+
+background-color:rgba(248, 27, 211, 0.897); 
+
+color: white; 
+
+} 
+
+.box  .btn input{
+
+    background: rgba(238, 18, 164);
+
+    color: white;
+
+    width: 250px;
+
+    height: 40px;
+
+    font-size: 25px;
+
+    border: rgba(238, 18, 164);
+
+    font-family:Helvetica ;
+
+}
+
+</style>  
+
+ 
+
+<body>
+
+    <div class = "first">
+
+        <h1>ONLINE EXAMINATION</h1>
+
+        <div class="box">
+
+            <center> <h3 style="font-size:40px ; color:black;">LEVEL 3</h3></center>
+
+            <div><span id="time" style="float: right; font-size: 40px;"> Your time ends in 00:40</span></div><br><br><br>
+
+            <p>MULTIPLE CHOICE. Read each item carefully. Choose the best answer on the choices.</p>
+
+            <form name="exam" id="exam">
+
+            <div>
+
+   
+
+<p>11. A programmer who specializes in, or specifically engaged in the development of World Wide Web applications using a client-server model.</p>
+
+<p><input type="radio" name="question11" value="System Analyst">A. System Analyst</p>
+
+<p><input type="radio" name="question11" value="Software Engineer">B. Software Engineer</p>
+
+<p><input type="radio" name="question11" value="Web Developer">C. Web Developer</p>
+
+<p><input type="radio" name="question11" value="Network Administrator">D. Network Administrator</p>
+
+</div>
+
+<div>
+
+<p>12. A web ____ is a software program that retrieve the page and displays it. </p>
+
+<p><input type="radio" name="question12" value="Station">A. Station</p>
+
+<p><input type="radio" name="question12" value="Client">B. Client</p>
+
+<p><input type="radio" name="question12" value="Browser">C. Browser</p>
+
+<p><input type="radio" name="question12" value="Server">D. Server</p>
+
+</div>
+
+<div>
+
+<p>13. It is code hosting platform for version control and collaboration.</p>
+
+<p><input type="radio" name="question13" value="Google code">A. Google code</p>
+
+<p><input type="radio" name="question13" value="Bitbucket">B.­ Bitbucket</p>
+
+<p><input type="radio" name="question13" value="Source Forge">C. Source Forge</p>
+
+<p><input type="radio" name="question13" value="Github">D. Github</p>
+
+</div>
+
+<div>
+
+<p>14. What element defines a paragraph.</p>
+
+<p><input type="radio" name="question14" value="h1">A. h1</p>
+
+<p><input type="radio" name="question14" value="title">B. title</p>
+
+<p><input type="radio" name="question14" value="p">C. p</p>
+
+<p><input type="radio" name="question14" value="html">D. html</p>
+
+</div>
+
+<div>
+
+<p>15. It is the set of markup symbols or codes inserted into a file intended for display on the internet.</p>
+
+<p><input type="radio" name="question15" value="HTML">A. HTML</p>
+
+<p><input type="radio" name="question15" value="CSS">B. CSS</p>
+
+<p><input type="radio" name="question15" value="JavaScript">C­. JavaScript</p>
+
+<p><input type="radio" name="question15" value="php">D. php</p>
+
+</div>
+
+<div>
+
+    <div class="btn">
+
+        <center> <input type="button" name="" value="View Score" id="button" onclick="thirdcheck()"></center> </div>
+
+          </form>
+
+          <script src="script.js"></script>
+
+      <br> <br> <br>
+
+      <center><div class="score" id="score" style="font-size: 20px;"></div></center><br><br><br>
+
+        <div class="pagination_section"> 
+
+        <center><a href="sec.html"><< Previous</a> 
+
+        <a href="first.html"class="active">1</a> 
+
+        <a href="sec.html">2</a> 
+
+        <a href="third.html" >3</a> 
+
+        <a href="#">Next >></a> </center>
+
+    </div> 
+
+        </div>
+
+       
+
+</div>
+
+</body>
+
+<script>
+
+    function startTimer(duration, display) {
+
+        
+
+            var timer = duration, minutes, seconds;
+
+        
+
+            setInterval(function () {
+
+        
+
+                minutes = parseInt(timer / 40, 10);
+
+        
+
+                seconds = parseInt(timer % 40, 10);
+
+        
+
+        
+
+        
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+
+        
+
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        
+
+        
+
+        
+
+                display.textContent = minutes + ":" + seconds;
+
+        
+
+        
+
+        
+
+                if (--timer < 0) {
+
+        
+
+                    timer = duration;
+
+        
+
+                }
+
+        
+
+            }, 1000);
+
+        
+
+        }
+
+        
+
+        
+
+        
+
+        window.onload = function () {
+
+        
+
+            var Minutes = 40 * 1,
+
+        
+
+                display = document.querySelector('#time');
+
+    
+
+            startTimer(Minutes, display);
+
+        
+
+        };
+
+        </script>
+
+</html>
